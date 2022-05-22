@@ -1,8 +1,9 @@
+from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render, redirect
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 # Create your views here.
-
+@csrf_exempt
 def register(request):
     """Resitration page for new user"""
     if request.method != 'POST':
